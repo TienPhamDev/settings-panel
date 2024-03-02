@@ -50,3 +50,19 @@ body{
   color: #BB8EA6;
   margin-left: 36px;
 }
+.switch-btn{
+  width: 64px;
+  height: 36px;
+  background-color: #E3EAEE;
+  border-radius: 20px;
+}
+/* grid box */
+.grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+.grid-item-btn{
+  align-self: center;
+  justify-self: center;
+}
