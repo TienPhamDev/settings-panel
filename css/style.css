@@ -55,6 +55,16 @@ body{
   height: 36px;
   background-color: #E3EAEE;
   border-radius: 20px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.toggle-dot{
+  background-color: #FFFFFF;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 /* grid box */
 .grid{
