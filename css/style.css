@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Inter',sans-serif;
+  background-color: #BB8EA6;
+}
+h2{
+  margin-top: 0;
+}
+
+/* wrapper */
+
+.wrapper{
+  margin: 0 auto;
+  background: url('/assets/dots.svg'),url('/assets/dots.svg');
+  background-size: 30% 30%;
+  background-repeat: no-repeat,no-repeat;
+  background-position: top right, bottom left;
+  width: 769px;
+  height: 100vh;
+}
+
+/* flex box */
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+/* setting panel */
