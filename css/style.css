@@ -15,14 +15,14 @@ body{
   background-size: 30% 30%;
   background-repeat: no-repeat,no-repeat;
   background-position: top right, bottom left;
-  width: 769px;
+  width: 768px;
   height: 100vh;
 }
 .container-flex{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 /* flex box */
 
@@ -35,26 +35,29 @@ body{
 /* setting panel */
 .setting-panel-box{
   background-color: #FFFFFF;
-  padding: 48px;
+  padding: 36px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  height: 70%;
             
 }
 .setting-header{
   margin-top: 0;
   color: #A06484;
   border-bottom: 2px solid #A06484;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 .setting-box{
   color: #BB8EA6;
   margin-left: 36px;
 }
 .switch-btn{
-  width: 64px;
+  width: 72px;
   height: 36px;
   background-color: #E3EAEE;
   border-radius: 20px;
+  border: none;
 
   display: flex;
   justify-content: left;
@@ -70,7 +73,6 @@ body{
 .grid{
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 24px;
 }
 .grid-item-btn{
   align-self: center;
