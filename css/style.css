@@ -60,8 +60,13 @@ body{
 
   display: flex;
   align-items: center;
-}
 
+  transition: all 0.3s ease-out;
+}
+.switched{
+  justify-content: right;
+  background-color: #CB87AB;
+}
 .delete-btn{
   padding:12px 24px;
   background-color: #FF9292;
