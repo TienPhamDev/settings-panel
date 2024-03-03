@@ -1,13 +1,17 @@
 const switchesBTN = document.querySelectorAll(".switch-btn");
-
+const switche = document.querySelector(".switch-btn");
+let store =[]
 for (let i = 0; i < switchesBTN.length;i++){
   let switchBTN = switchesBTN[i]
   switchBTN.addEventListener("click", (e)=>{
-    if (switchBTN.classList.contains("switched")) {
-      switchBTN.classList.remove("switched");
+    if (switchBTN.classList.contains("active")) {
+      switchBTN.classList.remove("active");
     } else {
-      switchBTN.classList.add('switched');
-      
+      switchBTN.classList.add('active');
+      store.push(switchBTN)
+      localStorage.setItem("activate",switchBTN.classList);
     }
    });
 }
+
+

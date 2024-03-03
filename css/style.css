@@ -61,9 +61,9 @@ body{
   display: flex;
   align-items: center;
 
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
 }
-.switched{
+.active{
   justify-content: right;
   background-color: #CB87AB;
 }
