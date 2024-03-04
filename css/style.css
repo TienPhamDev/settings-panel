@@ -13,24 +13,30 @@ body{
 :root{
   --primary-color:#FFFFFF;
   --background-color:#BB8EA6;
+  --white-text-color:#111827;
   /* --primary-color:#0f172a;
   --background-color:#1e293b; */
 }
 .dark-mode{
   --primary-color:#0f172a;
-  --background-color:#1e293b;  
+  --background-color:#1e293b;
+  --white-text-color:#f3f4f6;  
 }
 
 /* wrapper */
 
 .wrapper{
   margin: 0 auto;
+  position: relative;
   background: url('/assets/dots.svg'),url('/assets/dots.svg');
   background-size: 30% 30%;
   background-repeat: no-repeat,no-repeat;
   background-position: top right, bottom left;
   width: 768px;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-flex{
   display: flex;
@@ -40,10 +46,7 @@ body{
 }
 /* flex box */
 
-.flex{
- display: flex;
- flex-direction: column;
-}
+
 /* grid box */
 .grid{
   display: grid;
@@ -117,9 +120,19 @@ body{
 }
 
 /* delete modal */
-.modal-box{
-  position: absolute;
+.delete-modal-box{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-40%);
   z-index: 1;
+  background-image: #111827;
+  /* gradient direction: to right, color stops: #ffcc00 to #ff6699 */
+  width: 460px;
+  
+  
+}
+.modal-box{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(1fr,3);
@@ -127,10 +140,11 @@ body{
 
   border-radius: 10px;
   padding: 24px;
-  width: 460px;
+  width: 100%;
   background-color: var(--primary-color);
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
 }
 .warning-icon{
   width: 72px;
@@ -148,4 +162,30 @@ body{
 .modal-box > p{
   font-size: 14px;
   color: #020617;
+  color: var(--white-text-color);
+}
+.modal-box > div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.modal-box > div > button{
+  padding: 12px;
+  width: 100%;
+  font-weight: 700;
+  color:#0f172a ;
+  border-radius: 5px;
+  border: none;
+  background-color: #d1d5db;
+  transition: all 0.3s ease;
+}
+.modal-box > div > button:first-child{
+  background-color:#ef4444;
+}
+.modal-box > div > button:first-child:hover{
+  background-color: #b91c1c;
+}
+.modal-box > div > button:nth-child(2):hover{
+  background-color: #9ca3af;
 }

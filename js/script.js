@@ -55,7 +55,10 @@ activateButton(visibilityBTN);
 activateButton(privacyBTN);
 activateButton(darkModeBTN);
 // set all buttons to non active state when delete button clicked
-deleteBTN.addEventListener("click", () => {
+deleteBTN.addEventListener("click", (e) => {
+  if (e.target.textContent === "Delete") {
+    
+  }
   setDefaultButton(syncBTN);
   setDefaultButton(visibilityBTN);
   setDefaultButton(privacyBTN);
