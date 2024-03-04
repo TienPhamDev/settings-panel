@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Divs with Different z-index</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* Prevents scrollbars for this example */
+    }
+
+    .div1 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+
+    .div2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      top: 100px;
+      left: 100px;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="div1"></div>
+<div class="div2"></div>
+
+</body>
+</html>
