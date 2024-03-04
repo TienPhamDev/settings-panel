@@ -6,9 +6,6 @@ body{
   font-family: 'Inter',sans-serif;
   background-color: var(--background-color);
 }
-.hidden{
-  display:none;
-}
 /* Dark Mode */
 :root{
   --primary-color:#FFFFFF;
@@ -120,17 +117,28 @@ body{
 }
 
 /* delete modal */
+.delete-active{
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;  
+}
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
 .delete-modal-box{
   position: fixed;
   top: 40%;
   left: 50%;
   transform: translate(-50%,-40%);
-  z-index: 1;
+  z-index: 999;
   background-image: #111827;
   /* gradient direction: to right, color stops: #ffcc00 to #ff6699 */
   width: 460px;
-  
-  
+
+
+  transition: 0.5s;
 }
 .modal-box{
   display: grid;

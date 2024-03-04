@@ -57,7 +57,10 @@ activateButton(darkModeBTN);
 // set all buttons to non active state when delete button clicked
 deleteBTN.addEventListener("click", (e) => {
   if (e.target.textContent === "Delete") {
-    
+    const blur = document.querySelector("#blur");
+    const deleteModal = document.getElementById("delete-confirm");
+    blur.classList.toggle("delete-active");
+    deleteModal.classList.remove("hidden");
   }
   setDefaultButton(syncBTN);
   setDefaultButton(visibilityBTN);
