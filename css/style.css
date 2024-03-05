@@ -126,7 +126,7 @@ body{
   
   visibility: hidden;
   opacity: 0;
-  transition: 1s;
+  transition: 0.3s;
 }
 .delete-modal-box{
   position: fixed;
@@ -138,7 +138,7 @@ body{
   /* gradient direction: to right, color stops: #ffcc00 to #ff6699 */
   width: 460px;
   
-  transition: 1s;
+  transition: 0.3s;
 }
 .modal-box{
   display: grid;

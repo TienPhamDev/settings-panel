@@ -5,6 +5,9 @@ const visibilityBTN = settingBox.children["visibility"];
 const privacyBTN = settingBox.children["privacy"];
 const deleteBTN = settingBox.children["delete"];
 const darkModeBTN = settingBox.children["darkmode"];
+
+const SelectDeleteButtons = document.getElementById("delete-buttons");
+const deleteButtons = SelectDeleteButtons.children;
 // functions
 function switchButton(button) {
   button.addEventListener("click", (e) => {
@@ -54,17 +57,38 @@ activateButton(syncBTN);
 activateButton(visibilityBTN);
 activateButton(privacyBTN);
 activateButton(darkModeBTN);
+
+
 // set all buttons to non active state when delete button clicked
 deleteBTN.addEventListener("click", (e) => {
   if (e.target.textContent === "Delete") {
     const blur = document.querySelector("#blur");
     const deleteModal = document.getElementById("delete-confirm");
-    blur.classList.toggle("delete-active");
+    blur.classList.add("delete-active");
     deleteModal.classList.remove("hidden");
+
+    const SelectDeleteButtons = document.getElementById("delete-buttons");
+    const deleteButtons = SelectDeleteButtons.children;
+    
+    for (let i = 0; i < deleteButtons.length; i++){
+      let buttons = deleteButtons[i];
+      buttons.addEventListener("click", (e) => {
+        if (buttons.id === "delete-no") {
+          deleteModal.classList.add("hidden");
+          blur.classList.remove("delete-active");
+        } else if (buttons.id === "delete-yes") {
+          setDefaultButton(syncBTN);
+          setDefaultButton(visibilityBTN);
+          setDefaultButton(privacyBTN);
+          setDefaultButton(darkModeBTN);
+          deleteModal.classList.add("hidden");
+          blur.classList.remove("delete-active");
+        }
+      });
+      
+    }
+    
   }
-  setDefaultButton(syncBTN);
-  setDefaultButton(visibilityBTN);
-  setDefaultButton(privacyBTN);
-  setDefaultButton(darkModeBTN);
+
 });
 
