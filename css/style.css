@@ -123,9 +123,10 @@ body{
   user-select: none;  
 }
 .hidden{
+  
   visibility: hidden;
   opacity: 0;
-  transition: 0.5s ease-out;
+  transition: 1s;
 }
 .delete-modal-box{
   position: fixed;
@@ -136,9 +137,8 @@ body{
   background-image: #111827;
   /* gradient direction: to right, color stops: #ffcc00 to #ff6699 */
   width: 460px;
-
-
-  transition: 0.5s;
+  
+  transition: 1s;
 }
 .modal-box{
   display: grid;
