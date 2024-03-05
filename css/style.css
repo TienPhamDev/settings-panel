@@ -54,7 +54,12 @@ body{
   justify-self: center;
 }
 
-
+.grid-create-account-btn{
+  grid-area: 6 / 1 / 6 / -1;
+  align-self: center;
+  justify-self: center;
+  margin: 24px 0 24px 0;
+}
 /* setting panel */
 .setting-panel-box{
   background-color: var(--primary-color);

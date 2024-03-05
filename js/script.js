@@ -5,9 +5,9 @@ const visibilityBTN = settingBox.children["visibility"];
 const privacyBTN = settingBox.children["privacy"];
 const deleteBTN = settingBox.children["delete"];
 const darkModeBTN = settingBox.children["darkmode"];
+const deleteAccountDiv = deleteBTN.previousElementSibling;
 
-const SelectDeleteButtons = document.getElementById("delete-buttons");
-const deleteButtons = SelectDeleteButtons.children;
+
 // functions
 function switchButton(button) {
   button.addEventListener("click", (e) => {
@@ -83,6 +83,12 @@ deleteBTN.addEventListener("click", (e) => {
           setDefaultButton(darkModeBTN);
           deleteModal.classList.add("hidden");
           blur.classList.remove("delete-active");
+
+          deleteBTN.textContent = "Create an Account";
+          settingBox.removeChild(deleteAccountDiv);
+          deleteBTN.classList.remove("grid-item-btn");
+          deleteBTN.classList.add("grid-create-account-btn");
+
         }
       });
       
